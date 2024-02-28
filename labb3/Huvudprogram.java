@@ -1,20 +1,21 @@
 package labb3;
 
-//import static labb3.modell.Väderstreck.*;
+import static labb3.modell.Väderstreck.*;
+
+import java.awt.Color;
+import java.util.ArrayList;
+
+import labb3.modell.*;
+import java.util.Scanner;
+
+public class Huvudprogram {
+//	Huvudprogram creates or rather designs how the level is to be
+//	This is basically a game engine that creates how the level is designed.
 //
-//import java.awt.Color;
-//import java.util.ArrayList;
-//
-//import labb3.modell.*;
-//
-//public class Huvudprogram {
-//	//Huvudprogram creates or rather designs how the level is to be
-//	//This is basically a game engine that creates how the level is designed.
-//
-//	//Here we just add rooms and connect them
-//
-//
-//	public static void main(String[] args) {
+//	Here we just add rooms and connect them
+
+
+	public static void main(String[] args) {
 //
 ////		Rum rum1 = new Rum(Color.BLUE, 10, 20, 0, 0);
 ////		Rum rum2 = new Rum(Color.RED, 15, 25, 5, 5);
@@ -65,23 +66,18 @@ package labb3;
 //
 //}
 
-import labb3.modell.Rum;
-import labb3.modell.Väderstreck;
-import labb3.modell.Nivå;
-import java.awt.Color;
-import java.util.ArrayList;
-import java.util.Scanner;
 
-public class Huvudprogram {
-	public static void main(String[] args) {
+
 		// Create rooms
 		Rum rumA = new Rum(Color.BLUE, 10, 10, 0, 0);
 		Rum rumB = new Rum(Color.GREEN, 10, 10, 20, 20);
 		Rum rumC = new Rum(Color.RED, 10, 10, 40, 40);
 
 		// Connect rooms: A -> B -> C
-		Rum.kopplaIhop(rumA, Väderstreck.ÖSTER, rumB, Väderstreck.VÄSTER);
-		Rum.kopplaIhop(rumB, Väderstreck.ÖSTER, rumC, Väderstreck.VÄSTER);
+		Rum.kopplaIhop(rumA, ÖSTER, rumB, VÄSTER);
+		Rum.kopplaIhop(rumB, ÖSTER, rumC, VÄSTER);
+		Rum.kopplaIhop(rumC, ÖSTER, rumA, VÄSTER);
+
 
 		ArrayList<Rum> rumLista = new ArrayList<>();
 		rumLista.add(rumA);

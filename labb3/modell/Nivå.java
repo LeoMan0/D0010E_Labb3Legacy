@@ -37,7 +37,7 @@ public class Nivå  {
 	// användaren "är i".
 
 	public Rum getCurrentRum(){
-		return currentRum;
+		return this.currentRum;
 	}
 
 	// TODO: Skriv klar instansmetoden hoppaÅt nedan så att den ändrar det rum
